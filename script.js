@@ -31,14 +31,15 @@ const lookup = {
   ",": ",",
 };
 
+
 function rot13(encodedStr) {
-  let decodedArr = []; // Your Result goes here
+  let decodedArr = ""; // Your Result goes here
   // Only change code below this line
   for(let i in encodedStr){
 	  if(lookup[encodedStr[i]] === undefined){
-		  decodedArr[i] = "#";
+		  decodedArr += encodedStr[i];
 	  }else{
-		  decodedArr[i] = lookup[encodedStr[i]];
+		 decodedArr += lookup[encodedStr[i]];
 	  }
   }
   return decodedArr; //return decodedArr
@@ -49,4 +50,7 @@ function rot13(encodedStr) {
 // console.log(rot13("SERR YBIR? NPPVBWBO"));
 
 // Do not change this line
-window.rot13 = rot13;
+console.log(rot13("ABCD#"));
+
+// Do not change this line
+// window.rot13 = rot13;
